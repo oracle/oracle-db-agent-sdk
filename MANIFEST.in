@@ -1,0 +1,12 @@
+include LICENSE.txt NOTICE.txt THIRD_PARTY_LICENSE.txt
+include README.md CHANGELOG.rst SECURITY.md pyproject.toml
+recursive-include src/oracle_db_agent_sdk *.py py.typed
+recursive-include examples *.py
+recursive-include tests *.py
+
+# Documentation sources, release automation, and its tests stay in the repository.
+prune docs
+prune dev_tools
+exclude .gitlab-ci.yml AGENTS.md Makefile CONTRIBUTING.md
+exclude tests/test_publish_dev.py tests/test_publish_release.py tests/test_release.py
+global-exclude *.py[cod]
